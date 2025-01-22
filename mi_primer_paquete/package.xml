@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>mi_prime_paquete</name>
+  <name>mi_primer_paquete</name>
   <version>0.0.0</version>
   <description>Este paquete incorpara funciones de conducción autónoma</description>
 

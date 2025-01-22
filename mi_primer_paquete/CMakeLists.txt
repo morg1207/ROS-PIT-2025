@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(mi_prime_paquete)
+project(mi_primer_paquete)
 
 
 find_package(catkin REQUIRED COMPONENTS
@@ -22,8 +22,12 @@ include_directories(
 )
 
 
-
+# Define un ejecutable llamado "publicador" a partir del archivo fuente "src/publicador.cpp".
 add_executable(publicador src/publicador.cpp)
+
+# Especifica las bibliotecas con las que el ejecutable "publicador" debe enlazarse.
+# Aquí se enlaza con las bibliotecas definidas en la variable `${catkin_LIBRARIES}`.
+# que engloba a todos los paquetes de ROS
 target_link_libraries(publicador  
    ${catkin_LIBRARIES}
 )
