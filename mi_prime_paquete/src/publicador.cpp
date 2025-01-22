@@ -22,7 +22,9 @@ int main(int argc, char **argv)
   while (ros::ok())
   {
     std::cout<< "Publicando velocidad en tortuga"<< std::endl;
+
     cmd_vel_pub.publish(cmd_vel_msg);
+    
     loop_rate.sleep();
   }
   return 0;
