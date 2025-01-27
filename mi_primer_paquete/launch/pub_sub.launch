@@ -1,0 +1,7 @@
+<launch>
+    <node name="turtlesim" pkg="turtlesim" type="turtlesim_node" output="screen" />
+    <!--node name="publicador" pkg="mi_primer_paquete" type="publicador" output="screen"/>
+    <node name="suscriptor" pkg="mi_primer_paquete" type="sub_pose" output="screen"/-->
+    <node name="suscriptor" pkg="mi_primer_paquete" type="pub_sub" output="screen"/>
+
+</launch>

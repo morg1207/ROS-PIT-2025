@@ -1,0 +1,48 @@
+<robot name="robot_pit">
+    
+
+    <link name="base_link">
+        
+    </link>
+
+    <link name="chassis_link">
+
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.8 0.5 0.2"/>
+            </geometry>
+            <material name="rojo">
+                <color rgba="1.0 0.0 0.0 1.0"/>
+            </material>
+        </visual>
+
+    </link>
+
+    <joint name="joint_base_chassis" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="chassis_link"/>
+    </joint>
+
+
+    <link name="rueda_derecha_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.05" length="0.05"/>
+            </geometry>
+            <material name="azul">
+                <color rgba="0.0 0.0 1.0 1.0"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="joint_chassis_rueda_derecha" type="continuous">
+        <origin xyz="0.0 0.275 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="chassis_link"/>
+        <child link="rueda_derecha_link"/>
+        <axis xyz="0.0 0.0 1.0"/>
+
+    </joint>
+</robot>

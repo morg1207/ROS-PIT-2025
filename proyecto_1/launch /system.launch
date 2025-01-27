@@ -1,0 +1,9 @@
+<launch>
+
+    <arg name="lado_metros_cuadrado" default="20" doc="La longitud del lado del cuadrado a realizar" />
+
+    <node name="nodo_hacer_cuadrado" pkg="proyecto_1" type="cuadrado" output="screen">
+        <param name="lado_cuadrado" value="$(arg lado_metros_cuadrado)"/>
+    </node>
+    
+</launch>

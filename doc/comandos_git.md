@@ -47,7 +47,7 @@ git status
 
 ---
 
-## **4. Añadir y Confirmar Cambios**
+## **4. Añadir,Confirmar y actualizar  Cambios**
 
 ### Añadir archivos al área de preparación (Staging Area):
 - Un archivo específico:
@@ -58,6 +58,11 @@ git status
   ```bash
   git add .
   ```
+
+  ```bash
+  git pull origin main
+  ```
+
 
 ### Hacer un commit (guardar cambios):
 ```bash
