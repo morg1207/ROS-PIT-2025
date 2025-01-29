@@ -39,7 +39,7 @@
     </link>
 
     <joint name="joint_chassis_rueda_derecha" type="continuous">
-        <origin xyz="0.0 0.275 0.0" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0.0 0.275 0.0" rpy="-1.57 0.0 0.0"/>
         <parent link="chassis_link"/>
         <child link="rueda_derecha_link"/>
         <axis xyz="0.0 0.0 1.0"/>

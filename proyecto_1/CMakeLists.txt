@@ -29,3 +29,9 @@ target_link_libraries(cuadrado
    ${catkin_LIBRARIES}
 )
 
+add_executable(control_angulo src/control_angulo.cpp)
+
+target_link_libraries(control_angulo  
+   ${catkin_LIBRARIES}
+)
+

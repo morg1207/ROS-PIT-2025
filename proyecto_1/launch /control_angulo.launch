@@ -1,0 +1,9 @@
+<launch>
+
+    <arg name="angulo_deseado" default="20" doc="El angulo final de control del robot" />
+
+    <node name="nodo_girar_angulo" pkg="proyecto_1" type="control_angulo" output="screen">
+        <param name="angulo_deseado" value="$(arg angulo_deseado)"/>
+    </node>
+    
+</launch>

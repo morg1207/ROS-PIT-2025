@@ -2,8 +2,6 @@
 #include "nav_msgs/Odometry.h"         // Biblioteca para trabajar con el mensaje Pose de turtlesim.
 #include "geometry_msgs/Twist.h"    // Biblioteca para trabajar con el mensaje Twist (comandos de velocidad).
 
-
-
 nav_msgs::Odometry odom_msg;
 
 // Callback que se ejecuta cada vez que se recibe un mensaje en el tópico "/odom
