@@ -148,7 +148,7 @@
     </joint>
 
     <link name="rueda_caster_falso_link">
-        <visual>
+        <!--visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <sphere radius="0.10"/>
@@ -156,7 +156,7 @@
             <material name="anaranjado">
                 <color rgba="0.5 0.5 0.0 1.0"/>
             </material>
-        </visual>
+        </visual-->
 
         <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -266,6 +266,7 @@
             <robotBaseFrame>base_link</robotBaseFrame>
 
             <publishWheelJointState>true</publishWheelJointState>
+
         </plugin>
     </gazebo>
 

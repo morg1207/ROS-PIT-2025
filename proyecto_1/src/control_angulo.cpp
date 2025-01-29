@@ -6,7 +6,7 @@
 
 nav_msgs::Odometry odom_msg;
 double yaw = 0.0; // Almacena el ángulo de orientación en radianes
-float orientacion_inicial=false;
+bool flag_orientacion_inicial=false;
 
 // Callback para recibir la odometría y extraer el ángulo yaw
 void poseCallback(const nav_msgs::Odometry::ConstPtr& msg) {
@@ -29,7 +29,7 @@ void poseCallback(const nav_msgs::Odometry::ConstPtr& msg) {
              odom_msg.pose.pose.position.x, 
              odom_msg.pose.pose.position.y, 
              yaw);
-    orientacion_inicial = true;
+    falg_orientacion_inicial = true;
 }
 
 int main(int argc, char **argv) {
@@ -67,6 +67,7 @@ int main(int argc, char **argv) {
     while(!orientacion_inicial){
         ros::spinOnce();
     };
+
     ROS_INFO("Orientacion inicial: %.3f rad", yaw);
 
     double error=0;

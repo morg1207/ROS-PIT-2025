@@ -43,7 +43,7 @@
     <!-- Rueda derecha -->
     <link name="rueda_derecha_link">
         <visual>
-            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>  <!-- Rotada 90 grados en X -->
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>  <!-- Rotada 90 grados en X -->
             <geometry>
                 <cylinder radius="0.20" length="0.05"/>
             </geometry>
@@ -54,7 +54,7 @@
 
         <!-- Colisión de la rueda derecha -->
         <collision>
-            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <cylinder radius="0.20" length="0.05"/>
             </geometry>
@@ -79,7 +79,7 @@
     <!-- Rueda izquierda -->
     <link name="rueda_izquierda_link">
         <visual>
-            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>  <!-- Rotada 90 grados en X -->
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>  <!-- Rotada 90 grados en X -->
             <geometry>
                 <cylinder radius="0.20" length="0.05"/>
             </geometry>
@@ -90,7 +90,7 @@
 
         <!-- Colisión de la rueda izquierda -->
         <collision>
-            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <cylinder radius="0.20" length="0.05"/>
             </geometry>

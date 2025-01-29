@@ -1,10 +1,13 @@
 <launch>
-  <arg name="x_pos" default="-2.0"/>
-  <arg name="y_pos" default="-0.5"/>
+
+  <!-- Declaro argumentos para insertar el robot en una posición específica-->
+  <arg name="x_pos" default="-4.0"/>
+  <arg name="y_pos" default="-2.5"/>
   <arg name="z_pos" default="0.0"/>
 
+  <!-- Ejecuto gazebo con un world específico-->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <!--arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/turtlebot3_world.world"/-->
+    <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/turtlebot3_world.world"/>
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
@@ -13,10 +16,14 @@
   </include>
 
   <!--arg name="robot" default="$(find mi_primer_robot)/urdf/robot_gazebo_properties.urdf"/-->
+
+  <!-- Creo el parámetro robot_description que contiene el URDF de mi robot-->
   <arg name="robot" default="$(find mi_primer_robot)/urdf/robot_gazebo_plugins.urdf"/>
   <param name="robot_description" command="cat $(arg robot)" />
 
+  <!-- Para publicar los tf y suscribirme a joint states-->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
+  <!-- Inserto el robot-->
   <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model pit_robot -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
 </launch>
